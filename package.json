@@ -1,0 +1,20 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego de Memotest desarrollado en JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Memotest",
+    "Juego",
+    "JavaScript",
+    "Bootstrap"
+  ],
+  "author": "Agustin Ramunno",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
