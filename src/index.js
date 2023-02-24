@@ -27,3 +27,26 @@ function configurarBloques($bloques, colores) {
     $bloques[i].classList.add(color)
   })
 }
+
+function bloquesSonIguales($bloque1, $bloque2) {
+  return $bloque1.className === $bloque2.className
+}
+
+function mostrarBloque($bloque) {
+  $bloque.style.opacity = '1'
+}
+
+function ocultarBloque($bloque) {
+  setTimeout(() => {
+    $bloque.style.opacity = '0'
+  }, 300)
+}
+
+function eliminarBloque($bloque) {
+  setTimeout(() => {
+    $bloque.parentElement.classList.add('deshabilitar')
+    $bloque.remove()
+    $bloque.style.opacity = '0'
+    evaluarFinDeJuego()
+  }, 300)
+}
