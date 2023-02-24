@@ -50,3 +50,11 @@ function eliminarBloque($bloque) {
     evaluarFinDeJuego()
   }, 300)
 }
+
+function evaluarFinDeJuego() {
+  if (document.querySelectorAll('.bloque').length === 0) {
+    $tablero.classList.add('ocultar')
+    $textoFinal.querySelector('span').textContent = rondas.toString()
+    $textoFinal.classList.remove('ocultar')
+  }
+}
