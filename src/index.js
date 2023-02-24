@@ -20,6 +20,52 @@ const colores = [
   'celeste'
 ]
 
+$botonJugar.addEventListener('click', configurarJuego)
+$reiniciarJuego.addEventListener('click', reiniciarJuego)
+
+function configurarJuego() {
+  const coloresRepetidos = [...colores, ...colores]
+  configurarBloques($bloques, coloresRepetidos)
+  manejarEventos($tablero)
+}
+
+function manejarEventos($tablero) {
+  $botonJugar.classList.add('ocultar')
+  $reiniciarJuego.classList.remove('ocultar')
+  $textoFinal.classList.add('ocultar')
+  $tablero.classList.remove('ocultar')
+  $tablero.addEventListener('click', (e) => {
+    const $elemento = e.target
+
+    if ($elemento.classList.contains('bloque')) {
+      manejarClickBloque($elemento)
+    }
+  })
+}
+
+function manejarClickBloque($bloqueActual) {
+  mostrarBloque($bloqueActual)
+
+  if ($primerBloque === null) {
+    $primerBloque = $bloqueActual
+  } else {
+    if ($primerBloque === $bloqueActual) {
+      return
+    }
+
+    rondas++
+
+    if (bloquesSonIguales($primerBloque, $bloqueActual)) {
+      eliminarBloque($primerBloque)
+      eliminarBloque($bloqueActual)
+    } else {
+      ocultarBloque($primerBloque)
+      ocultarBloque($bloqueActual)
+    }
+    $primerBloque = null
+  }
+}
+
 function configurarBloques($bloques, colores) {
   const coloresAleatorios = colores.sort(() => 0.5 - Math.random())
 
@@ -57,4 +103,8 @@ function evaluarFinDeJuego() {
     $textoFinal.querySelector('span').textContent = rondas.toString()
     $textoFinal.classList.remove('ocultar')
   }
+}
+
+function reiniciarJuego() {
+  window.location.reload()
 }
