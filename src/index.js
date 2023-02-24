@@ -19,3 +19,11 @@ const colores = [
   'naranja',
   'celeste'
 ]
+
+function configurarBloques($bloques, colores) {
+  const coloresAleatorios = colores.sort(() => 0.5 - Math.random())
+
+  coloresAleatorios.forEach((color, i) => {
+    $bloques[i].classList.add(color)
+  })
+}
