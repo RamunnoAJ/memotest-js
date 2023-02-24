@@ -13,8 +13,8 @@ body {
 }
 
 .bloque {
-  height: 20vh;
-  /* opacity: 0; */
+  height: 100%;
+  opacity: 0;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
 }
@@ -29,7 +29,7 @@ body {
 
 .deshabilitar {
   background-color: #777;
-  transition: all ease 0.3s;
+  cursor: not-allowed;
 }
 
 .rojo {
@@ -62,4 +62,16 @@ body {
 
 .celeste {
   background-color: skyblue;
+}
+
+.columna {
+  padding: 1px;
+  border: 1px solid gray;
+  height: 20vh;
+}
+
+@media (min-width: 75rem) {
+  .columna {
+    padding: 5px;
+  }
 }

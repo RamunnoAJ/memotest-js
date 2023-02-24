@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memotest | Agustín Ramunno</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div>
-      <h1 class="text-center titulo">Memotest</h1>
-      <div id="fin-juego" class="m-4 text-center ocultar">
-        Terminaste el juego, tardaste <span id="rondas"></span> turnos.
-      </div>
-      <div id="tablero" class="">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memotest | Agustín Ramunno</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div>
+    <h1 class="text-center titulo">Memotest</h1>
+    <div id="fin-juego" class="m-4 text-center ocultar">
+      ¡Felicitaciones! Terminaste el juego, tardaste <span id="rondas"></span> turnos.
+    </div>
+    <div id="tablero" class="ocultar">
+      <div class="container">
+        <div class="row">
+          <div class="col columna">
+            <div class="bloque"></div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
+          <div class="col columna">
+            <div class="bloque"></div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
+          <div class="col columna">
+            <div class="bloque"></div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
-            <div class="col">
-              <div class="bloque mh-100"></div>
-            </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
+          </div>
+          <div class="col columna">
+            <div class="bloque"></div>
           </div>
         </div>
       </div>
-      <div class="text-center m-5">
-        <button id="boton-jugar" class="btn btn-primary">Jugar</button>
-      </div>
     </div>
-    <script src="src/index.js"></script>
-  </body>
+    <div class="text-center m-5">
+      <button id="boton-jugar" class="btn btn-primary">Jugar</button>
+      <button id="reiniciar-juego" class="btn btn-dark ocultar">Volver a jugar</button>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
 </html>
