@@ -4,7 +4,8 @@
   "description": "Juego de Memotest desarrollado en JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server -c -1",
+    "cypress:open": "cypress open"
   },
   "keywords": [
     "Memotest",
@@ -16,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.2"
+  },
+  "devDependencies": {
+    "cypress": "^12.7.0"
   }
 }
